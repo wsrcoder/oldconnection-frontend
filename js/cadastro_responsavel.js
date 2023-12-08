@@ -80,10 +80,10 @@ async function salvar_dados_responsavel(responsavel)
         alert('erro ao salvar o responsavel. Tente novamente')
     }
 
-    window.location.replace("./Login.html")
+    window.location.replace("./index.html")
 }
 
 function btn_voltar()
 {
-    window.location.replace("./Login.html")
+    window.location.replace("./index.html")
 }

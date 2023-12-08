@@ -67,10 +67,10 @@ async function salvar_dados_orientador(orientador)
         alert('erro ao salvar o orientador. Tente novamente')
     }
 
-    window.location.replace("./Login.html")
+    window.location.replace("./index.html")
 }
 
 function btn_voltar()
 {
-    window.location.replace("./Login.html")
+    window.location.replace("./index.html")
 }
