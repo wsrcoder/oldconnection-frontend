@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Ari;
+    background-color: #ecebeb;
+}
+
+#logo {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    z-index: 99999;
+}
+
+#logo img {
+    border-radius: 25%;
+    width: 100px;
+}
+article{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.course-container{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 20px;
+}
+
+.course-presentation{
+    display: grid;
+
+    grid-template-columns: 30% 1fr 20%;
+    grid-template-rows: 20% 1fr;
+
+    /*background: linear-gradient(to bottom,#9c851f, #FFD820);*/
+    background-color:  #79d5db;}
+
+.course-presentation .container-img{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.course-presentation .container-img img{
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+.course-presentation .container-title{
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    text-align: center;
+    font-size: 1.3em;
+
+    /*background: linear-gradient(to top,#9c851f, #FFD820, #FFF139);*/
+    background-color:  #79d5db;
+}
+
+.course-presentation .container-title h5{
+    margin: 0;
+    color: black;
+}
+
+.course-presentation .container-description{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    padding-left: 10px;
+
+}
+
+.course-presentation .container-description p{
+    color:black;
+}
+
+.course-presentation .container-actions{
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.course-presentation .container-actions .action-item{
+    display: flex;
+    justify-content:center;
+}
+
+.course-presentation .container-actions .action-item button{
+    background-color: #0094B2;
+    color: white;
+
+    width: 100px;
+    height: 30px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.course-presentation .container-actions .action-item button:hover{
+    background-color: #0094B2;
+}
+
+#navbar {
+    font-size: 25px;
+    background: linear-gradient(to right,#EEC400, #FFD820, #FFF139);
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+   
+}
+
+#navbar img{
+    width: 245px;
+    border-radius: 25%;
+    float: top;
+}
+
+#sidebar {
+    position: relative;
+    width: 160px;
+    float: left;
+    margin-top: 129px;
+    height: 160vh;
+    z-index: 1;
+   
+  
+
+    background: linear-gradient(#0095B5,#0094B2,#19ADCB,#32C6E4);
+}
+
+.icon-button {
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-button {
+    margin-left:30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.home-icon {
+   width:50px; 
+   position:static; 
+}
+
+.play {
+   width:30px; 
+   height:auto; 
+   margin-top: 12px;
+   margin-left: 12px;
+   position:static; 
+   
+}
+.VIDEO {
+    position:fixed;  
+    margin-top: 180px;
+    bottom: 0;
+    width:150px; 
+    height:auto; 
+
+
+}
+
+#content {
+   margin-top:80px; 
+   margin-left:380px; 
+   display:block; 
+}
+
+#grid {
+   margin-top:20px; 
+   display:flex; 
+   flex-direction:column; 
+   grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); 
+   gap:20px; 
+}
+
+#grid img {
+   width:70%; 
+   cursor:pointer; 
+   height:auto; 
+}
+
+#whatsapp-button {
+
+   position:fixed; 
+   right:10px; 
+   bottom:10px; 
+   width:70px; 
+   height:auto; 
+}
+
+
+.container {
+    padding: 20px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.col-sm {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+#navbar-mobile {
+    display: none;
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    height: 150px;
+    font-size: 25px;
+    background: linear-gradient(to right,#EEC400, #FFD820, #FFF139);
+    padding: 0;
+    text-align: center;
+    
+}
+
+#MobileIMG{
+    height: auto; 
+    width: 245px;
+    border-radius: 25%;
+    float: top;
+}
+
+/* CODIGO RESPONSIVIDADE MOBILE */
+@media screen and (max-width : 768px) {
+
+    /* altera a direção do layout principal para coluna quando em uma tela pequena. */
+    body {
+        flex-direction : column ;
+    }
+
+    
+
+    #navbar-mobile {
+        display: block;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+
+    /* esconde o logo quando em uma tela pequena. */
+    #logo img {
+        width : 0% ;
+        display : block ;
+        margin-left : auto ;
+        margin-right : auto ;
+    }
+
+    /* ajusta a largura da imagem da navbar para 50% e centraliza-a quando em uma tela pequena. */
+    #navbar img{
+        width : 50% ;
+        display : block ;
+        margin-left : auto ;
+        margin-right : auto ;
+        order: 0;
+        
+    }
+
+    /* ajusta o layout da barra lateral para ser horizontal e centraliza seus itens quando em uma tela pequena. */
+    #sidebar {
+        position : static ;
+        width : 100% ;
+        height : auto ;
+        display : flex ;
+        flex-direction : row ;
+        justify-content : space-around ;
+        align-items: center;
+    }
+
+    /* ajusta o tamanho do ícone de casa para 30% e remove a margem superior quando em uma tela pequena. */
+    .home-icon {
+        max-width : 80% ;
+        order : 1 ; 
+        margin-top: 0; 
+    }
+
+    /* ajusta o tamanho do botão de play para ser igual ao do ícone de home e remove a margem superior quando em uma tela pequena. */
+    .play {
+       max-width : 90% ; 
+       order : 1 ; 
+       margin-top: 0; 
+    }
+
+    /* ajusta o tamanho do vídeo alinha à esquerda e acompanhar a rolagem do site */
+    .VIDEO {
+        position:fixed;  
+        margin-top: 180px;
+        bottom: 0;
+        width:150px; 
+        height:auto; 
+
+    
+    }
+
+    /* adiciona margens ao conteúdo principal */
+    #content {
+       margin-top : 20px ; 
+       margin-left : auto ; 
+       margin-right : auto ;  
+    }
+
+    /* ajusta a largura das imagens na grade para ocupar toda a largura */
+    #grid img {
+       width : 100% ;  
+    }
+
+    /* aove o botão do WhatsApp um pouco para a esquerda. */
+    #whatsapp-button {
+       right : -5% ;
+    }
+    
+  
+}

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+
+    background: linear-gradient(#0095B5,#0094B2,#19ADCB,#32C6E4);
+    /*background: linear-gradient(#32C6E4,#0094B2,#19ADCB,#074f5f);*/
+    
+}
+.Logo {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    margin-top: 25px;
+    margin-right: 25px;
+    width: 150px;
+    border-radius: 25%;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 30% 20% 20% 20% 10%;
+}
+
+header{
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /*background-color: azure;*/
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: 33% 1fr 33%;
+    grid-template-rows: 100%;
+}
+
+.conta-orientador-container{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+
+.conta-responsavel-container{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.conta-orientador-container .nova-conta-item{
+    display: flex;
+    justify-content: flex-start;
+
+    padding-top: 30px;
+    padding-left: 30px;
+
+}
+
+.conta-orientador-container .nova-conta-item button{
+    
+    background: linear-gradient(to right,#EEC400, #FFD820, #FFF139);
+    color:#0095B5;
+    font-size: 1.2em;
+    width: 220px;
+    height: 60px;
+}
+
+.conta-orientador-container .nova-conta-item button:hover{
+
+    background: linear-gradient(to right,#FFF139, #FFD820, #EEC400);
+    color:#19ADCB;
+    cursor: pointer;
+}
+
+
+.logo{
+    display: flex;
+    justify-content:center;
+    border-radius: 25%;
+}
+
+.conta-responsavel-container .nova-conta-item{
+    display: flex;
+    justify-content: flex-end;
+
+    padding-top: 30px;
+    padding-right: 30px;
+
+}
+
+
+.conta-responsavel-container .nova-conta-item button{
+    
+    background: linear-gradient(to right,#FFF139, #FFD820, #EEC400);
+    color:#0095B5;
+    font-size: 1.2em;
+    width: 220px;
+    height: 60px;
+}
+
+.conta-responsavel-container .nova-conta-item button:hover{
+
+    background: linear-gradient(to right,#EEC400, #FFD820, #FFF139);
+    color:#19ADCB;
+    cursor: pointer;
+}
+
+main{
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+}
+
+.login-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 40%;
+    height: 100%;
+
+}
+
+
+
+.login-form{
+    
+    background: linear-gradient(to right,#EEC400, #FFD820, #FFF139);
+    border-radius: 25px;
+}
+
+.login-form h1{
+    color: #0095B5;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.login-form:hover{
+    background: linear-gradient(to right,#FFF139, #FFD820, #FFF139);
+}
+
+.login-form-component{
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.login-form-component img{
+    width: 10%;
+}
+
+.login-form-component .login-textbox{
+    width: 75%;
+    background-color: #0095B5;
+    font-size: 1.5em;
+    color: white;
+    margin: 0 auto;
+
+    border-radius: 25px;
+}
+
+.login-form-component .login-textbox:focus{
+    background-color: #19ADCB;
+}
+
+
+.login-form-component .login-label{
+    color:#0095B5;
+    font-size: 1.5em;
+
+}
+
+.login-form-component .login-checkbox{
+    justify-content: flex-end;
+}
+
+.login-form-component button{
+    width: 95%;
+    height: 50px;
+    background-color: #0095B5;
+    
+    font-size: 1.5em;
+    color: white;
+
+    border-radius: 25px;
+}
+
+.login-form-component button:hover{
+    background-color: #19ADCB;
+    font-size: 1.6em;
+}
+
+footer{
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    /*background-color: burlywood;*/
+}
+
+.whatsapp-button {
+    position: fixed;
+    right:10px; 
+    bottom: 30px; 
+    width:70px; 
+    height:auto; 
+ }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orientador</title>
+    <link rel="stylesheet" type="text/css" href="TelaOrientador.css">
+    <script src="TelaOrientadosJS.js"></script>
+</head>
+<body>
+    <div id="logo">
+        <a href="TelaPrincipal.html"><img src="imgs/Logos/Logo.jpg" alt=""></a>
+    </div>
+
+    <div id="sidebar">
+        <div id="Menu">
+            <h2>
+                <p>
+                    <img src="" alt="">
+                </p>
+            </h2>
+        </div>
+        <br>
+        <button class="icon-button" onclick="playSound('MENU.mp3')">
+            <div><h3></h3><a href="TelaPrincipal.html"><img class="home-icon" src="imgs/home.png" alt="Ícone 1"></a></div>
+            <img class="play" src="imgs/playbutton.png" alt="">
+         </button>
+        <br>
+        <button class="icon-button" onclick="btn_cadastrar_curso()">
+            <div><h4></h4><img class="home-icon" src="imgs/register.png" alt="Ícone 2"></div> 
+            <img class="play" src="imgs/playbutton.png" alt="">
+        </button>
+        <br>
+        <button class="icon-button" onclick="playSound('som3.mp3')">
+            <div><h4></h4><img class="home-icon" src="imgs/icone sair-PhotoRoom.png-PhotoRoom.png" alt="Ícone 3"></div> 
+            <img class="play" src="imgs/playbutton.png" alt="">
+        </button>
+        <img class="VIDEO" src="imgs/VIDEO EXEMPLO.png" alt="">
+    </div>
+
+    
+
+    
+    <div id="navbar">
+        <img src="imgs/Logos/Central.png" alt="SomenteNome">
+    </div>
+
+    <div id="navbar-mobile">
+       <img src="imgs/Logos/Central.png" alt="SomenteNome" id="MobileIMG">
+    </div>
+
+    <div id="content">   
+        <h1 class="BemVindo">Bem-Vindo, Orientador.</h1>
+        <div id="grid">
+            <div class="quadrado">
+                <h3 div class="TipoConteudo">TIPO DE CONTEÚDO:</h3><br>
+                <div class="quadradoCheckBox">
+                <input type="checkbox" id="CheckboxCursosAtivos" class="checkbox-espaco" name="CursosAtivos" onclick="AparecerCursoAtivo()">
+                <label for="meuCheckbox">Cursos Ativos</label>
+
+                <input type="checkbox" id="CheckboxCursosEncerrados" class="checkbox-espaco" name="CursosEncerrados" onclick="AparecerCursoEncerrado()">
+                <label for="meuCheckbox">Cursos Encerrados</label>
+            </div>
+
+            <div class="quadradoCheckBox2">
+                <input type="checkbox" id="CheckboxGratuitos" class="checkbox-espaco" name="Gratuitos" onclick="AparecerCursoGratuito()">
+                <label for="meuCheckbox">Gratuitos</label>
+
+                <input type="checkbox" id="CheckboxPagos" class="checkbox-espaco" name="Pagos" onclick="AparecerCursoPago()">
+                <label for="meuCheckbox">Pagos</label>
+
+                
+            </div>
+            <div class="quadradoMeusCursos">
+                <h3 div class="MeusCursos">Meus Cursos</h3><br>
+                <div class="curso" id="cursoA">
+                    <img src="imgs/Aulas-pt.png" alt="Cursos2" id="imgCursos">
+                    <div class="curso-info">
+                        <h2>Curso Ativo</h2>
+                        <p>Descrição do curso...</p>
+                    </div>
+                    <div class="curso-botoes">
+                        <button onclick="editarDescricao(this)">Editar</button>
+                        <button onclick="excluirCurso('cursoA')">Excluir</button>
+                    </div>
+                </div>
+                <br>
+                <div class="curso1" id="cursoI">
+                    <img src="imgs/Aulas-pt.png" alt="Cursos3" id="imgCurso1">
+                    <div class="curso-info1">
+                        <h2>Curso inativo</h2>
+                        <p>Descrição do curso...</p>
+                    </div>
+                    <div class="curso-botoes1">
+                        <button onclick="editarDescricao(this)">Editar</button>
+                        <button onclick="excluirCurso('cursoI')">Excluir</button>
+                    </div>
+
+                    
+                </div>
+                <br>
+                <div class="curso2" id="cursoG">
+                    <img src="imgs/Aulas-pt.png" alt="Cursos4" id="imgCurso1">
+                    <div class="curso-info2">
+                        <h2>Curso Gratuito</h2>
+                        <p>Descrição do curso...</p>
+                    </div>
+                    <div class="curso-botoes2">
+                        <button onclick="editarDescricao(this)">Editar</button>
+                        <button onclick="excluirCurso('cursoG')">Excluir</button>
+                    </div>
+
+                    
+                </div>
+
+                <br>
+                <div class="curso3" id="cursoP">
+                    <img src="imgs/Aulas-pt.png" alt="Cursos5" id="imgCurso1">
+                    <div class="curso-info3">
+                        <h2>Curso Pago</h2>
+                        <p>Descrição do curso...</p>
+                    </div>
+                    <div class="curso-botoes3">
+                        <button onclick="editarDescricao(this)">Editar</button>
+                        <button onclick="excluirCurso('cursoP')">Excluir</button>
+                    </div>
+
+                    
+                </div>
+
+
+
+            </div>
+            
+            </div>
+        </div>
+    </div>
+
+
+    <a href="https://chat.whatsapp.com/GGR2y3BJwkPBnNQYPHeT2L" target="_blank">
+        <img src="imgs/whatsapplogo.png.webp" id="whatsapp-button">
+    </a>
+
+    <script src="js/tela_orientador.js"></script>
+</body>
+</html>

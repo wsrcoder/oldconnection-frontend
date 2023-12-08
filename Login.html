@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="Login.css">
+    </head>
+    <body class="main-container">
+        <header>
+            <div class="header-container">
+                <div class="conta-orientador-container">
+                    <div class="nova-conta-item">
+                        <a href="CadastroOrientador.html"> <button onclick="">Quero ensinar</button> </a>
+                    </div>
+                    <div class="nova-conta-item">
+                        <button onclick="btn_responsavel()">Sou o responsavel</button>
+                    </div>
+
+                </div>
+            </div>
+            <img class="Logo" src="imgs/Logos/Logo.jpg" alt="">
+        </header>
+
+        <main>
+            <section class="login-container">
+                
+                <div class="login-form">
+                    <h1>OldConnection</h1>
+                    <div class="login-form-component">
+                            <img src="imgs/user-admin.png" alt="Email" onclick="console.log('botão')">
+                            <input id="email" class="login-textbox" type="text" required />
+                    </div>
+                    <div class="login-form-component">
+                        <img src="imgs/password.png" alt="Senha" onclick="console.log('botão')">
+                        <input id="senha" class="login-textbox" type="password" required/>
+                    </div>
+                    <div class="login-form-component">
+                        <label class="login-label" for="remmember-me">Lembre-se de mim</label>
+                        <input class="login-checkbox" type="checkbox" id="remmember-me">
+                    </div>
+                    <div class="login-form-component">
+                        <button onclick="on_login()">Entrar</button>
+                    </div>
+                    
+                </div>
+
+            </section>
+        </main>
+        <footer>
+            <div>
+                <a href="https://chat.whatsapp.com/GGR2y3BJwkPBnNQYPHeT2L" target="_blank">
+                    <img class="whatsapp-button" src="imgs/whatsapplogo.png.webp">
+                </a>
+            </div>
+        </footer>
+    </body>
+    <script src="js/login.js"></script>
+</html>

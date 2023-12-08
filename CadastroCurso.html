@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro Curso</title>
+    <link rel="stylesheet" type="text/css" href="CadastroCurso.css">
+
+</head>
+<body>
+    <div id="logo">
+        <a href="TelaPrincipal.html"><img src="imgs/Logos/Logo.jpg" alt=""></a>
+    </div>
+
+    <div id="sidebar">
+        <div id="Menu">
+            <h2>
+                <p>
+                    <img src="" alt="">
+                </p>
+            </h2>
+        </div>
+        <br>
+        <button class="icon-button" onclick="playSound('MENU.mp3')">
+           <div><h3></h3><a href="TelaPrincipal.html"><img class="home-icon" src="imgs/home.png" alt="Ícone 1"></a></div>
+           <img class="play" src="imgs/playbutton.png" alt="">
+        </button>
+        <br>
+        <button class="icon-button" onclick="playSound('som3.mp3')">
+            <div><h4></h4> <a href=""><img class="home-icon" src="imgs/icone sair-PhotoRoom.png-PhotoRoom.png" alt="Ícone 3"></a></div> 
+            <img class="play" src="imgs/playbutton.png" alt="">
+        </button>
+        <img class="VIDEO" src="imgs/VIDEO EXEMPLO.png" alt="">
+    </div>
+
+    <div id="navbar">
+        <img src="imgs/Logos/Central.png" alt="SomenteNome">
+    </div>
+
+    <div id="navbar-mobile">
+       <img src="imgs/Logos/Central.png" alt="SomenteNome" id="MobileIMG">
+    </div>
+    
+    <article>
+        
+        <h1 div class = "NovoCurso">Novo curso</h1>
+        <section class="register">
+                <div class="container">
+                    <h3>Informações</h3>
+                    <div class="component">
+                        <label for="nome_curso">Nome do curso</label>
+                        <input id="nome_curso" type="text" />
+                    </div>
+                        
+                    <div class="component">
+                        <label for="descricao_curso">Descrição</label>
+                        <textarea id="descricao_curso" cols="40" rows="5"></textarea>
+                    </div>
+                    <div class="horizontal-layout">
+                        <div class="component">
+                            <label for="data_inicio">Início das inscrições:</label>
+                            <input type="date" id="inicio_inscricoes" name="inicio_inscricoes">
+                            
+                        </div>
+                        <span></span>
+                        <div class="component">
+                            <label for="data_fim">Início das inscrições:</label>
+                            <input type="date" id="fim_inscricoes" name="fim_inscricoes">
+                            
+                        </div>
+                    </div>
+
+                    <div class="horizontal-layout">
+                        <div class="component">
+                            <label for="quantidade_vagas">Início das inscrições:</label>
+                            <input type="text" id="quantidade_vagas" name="quantidade_vagas">
+                            
+                        </div>
+                        <span></span>
+                        <div class="component">
+                            <label for="tel_contato">Início das inscrições:</label>
+                            <input type="text" id="tel_contato" name="tel_contato">
+                            
+                        </div>
+                    </div>
+
+                    <div class="component">
+                        <button id="selecionar_imagens">Selecionar imagens</button>
+                        
+                    </div>
+                    <span></span>
+                    <div class="horizontal-layout">
+                        <p>Selecione uma etiqueta:</p>
+                        <div class="component">
+                            <select id="curso_etiqueta">
+                                <option>Indefinido</option>
+                                <option>Ensino</option>
+                                <option>Artesanato</option>
+                                <option>Música</option>
+                                <option>Dança</option>
+                                <option>Redes Sociais</option>
+                                <option>Tecnologia</option>
+                            </select>
+                            
+                        </div>
+                        <div class="component">
+                            <button id="adicionar_etiqueta">Adicionar</button>
+                            
+                        </div>
+                    </div>
+
+                    <div class="component">
+                        <label for="video_apresentacao">Link para video de apresentação:</label>
+                        <input type="text" id="video_apresentacao" name="video_apresentacao">
+                    </div>
+
+                    <h3>Endereço do local do curso</h3>
+                    <div class="horizontal-layout">
+                        <div class="component">
+                            <label for="logradouro">Nome da rua:</label>
+                            <input type="text" id="logradouro" name="logradouro">
+                            
+                        </div>
+                        <span></span>
+                        <div class="component">
+                            <label for="numero">Número:</label>
+                            <input type="text" id="numero" name="numero">
+                        </div>
+                    </div>
+                    
+                    <div class="horizontal-layout">
+                        <div class="component">
+                            <label for="complemento">Complemento:</label>
+                            <input type="text" id="complemento" name="complemento">
+                            
+                        </div>
+                        <span></span>
+                        <div class="component">
+                            <label for="bairro">Bairro:</label>
+                            <input type="text" id="bairro" name="bairro">
+                        </div>
+                    </div>
+
+                    <div class="horizontal-layout">
+                        <div class="component">
+                            <label for="municipio">Munícipio:</label>
+                            <select>
+                                <option>Belo horizonte</option>
+                                <option>Betim</option>
+                                <option>Brumadinho</option>
+                                <option>Contagem</option>
+                                <option>Ibirité</option>
+                                <option>Neves</option>
+                                <option>Nova lima</option>
+                                <option>Sarzedo</option>
+                            </select>
+                            
+                        </div>
+                        <span></span>
+                        <div class="component">
+                            <label for="cep">CEP:</label>
+                            <input type="text" id="cep" name="cep">
+                        </div>
+                    </div>
+                    
+                    <div class="register-footer">
+                        <div class="horizontal-layout">
+                            <div class="component">
+                                <button onclick="btn_voltar()">Cancelar</button>
+                            </div>
+                            <div class="component">
+                                <button onclick="btn_salvar_dados_curso()">Salvar</button>
+                            </div>
+                        </footer>
+                    </div>
+
+
+                </div> 
+        </section>
+
+        <section class="register">
+            <div class="container">
+               
+                
+            
+
+            </div>
+        </section>
+        
+    </article>
+
+
+    <a href="https://chat.whatsapp.com/GGR2y3BJwkPBnNQYPHeT2L" target="_blank">
+        <img src="imgs/whatsapplogo.png.webp" id="whatsapp-button">
+    </a>
+
+    <script src="js/cadastro_curso.js"></script>
+</body>
+</html>

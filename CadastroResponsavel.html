@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Novo Cadastro (Responsável)</title>
+    <link rel="stylesheet" type="text/css" href="CadastroResponsavel.css">
+</head>
+
+<body>
+    <div id="logo">
+        <a href="TelaPrincipal.html"><img src="imgs/Logos/Logo.jpg" alt=""></a>
+    </div>
+
+    </div>
+    <div id="logo2">
+        <img src="imgs/Logos/Central.png" alt="SomenteNome">
+    </div>
+    <div id="corpo">
+
+
+        <h1 class="texto1">Novo Responsável</h1>
+
+            <div id="Login">
+                
+                <label for="email">*Email</label><br>
+                <input type="text" id="email" name="fname"><br>
+
+                <label for="confirmar_email">*Repita o email</label><br>
+                <input type="text" id="confirmar_email" name="fname"><br>
+
+                <label for="senha">*Senha</label><br>
+                <input type="text" id="senha" name="lname"><br>
+
+                <label for="confirmar_senha">*Repita sua senha</label><br>
+                <input type="text" id="confirmar_senha" name="fname"><br>
+           </div>
+
+                <div id = "Sobre">
+                    <h2>Sobre Você</h2>
+
+                    <label for="nome_responsavel">*Nome completo</label><br>
+                    <input type="text" id="nome_responsavel" name="fname"><br>
+
+
+                    <label for="data_nascimento">*Data de nascimento</label><br>
+                    <input type="text" id="data_nascimento" name="fname"><br>
+
+
+                    <p>*sexo</p>
+                    
+                    <select id="sexo">
+                        <option value="F">Feminino</option>
+                        <option value="M">Masculino</option>
+                        <option value="O">Outro</option>
+                    </select>
+
+                    <p>Escolaridade</p>
+                    
+                    <select id="escolaridade">
+                        <option value="Ensino Médio">Ensino Médio</option>
+                        <option value="Ensino Médio completo">Ensino Médio completo</option>
+                        <option value="Ensino Superior">Ensino Superior</option>
+                        <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                        <option value="Outros"></option>
+                        </select><br>
+
+                    <label for="profissao">Profissão</label><br>
+                    <input type="text" id="profissao" name="fname"><br>
+                </div>
+
+                <div id="Endereço">
+
+                    <h2>Endereço:</h2>
+                    <label for="logradouro">*Rua</label><br>
+                    <input type="text" id="logradouro" name="fname"><br>
+
+                    <label for="numero">*Numero</label><br>
+                    <input type="text" id="numero" name="fname"><br>
+
+                    <label for="complemento">Complemento</label><br>
+                    <input type="text" id="complemento" name="fname"><br>
+
+                    <label for="bairro">*Bairro</label><br>
+                    <input type="text" id="bairro" name="fname"><br>
+
+                    <label for="municipio">*Município</label><br>
+                    <input type="text" id="municipio" name="fname"><br>
+
+                    <label for="cep">CEP</label><br>
+                    <input type="text" id="cep" name="fname"><br>
+
+                    <h3>* campos obrigatorios</h3>
+
+                    <input class="botao1" id="botao_voltar" type="submit" value="Voltar" onclick="btn_voltar()">
+                    <input class="botao2" id="botao_confirmar"  type="submit" value="Confimar" onclick="btn_salvar_dados_responsavel()">
+
+                </div>
+                
+            </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="js/cadastro_responsavel.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro orientador</title>
+    <link rel="stylesheet" type="text/css" href="CadastroOrientador.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="logo">
+        <a href="TelaPrincipal.html"><img src="imgs/Logos/Logo.jpg" alt=""></a>
+    </div>
+
+    <div id="sidebar">
+        <div id="Menu">
+            <h2>
+                <p>
+                    <img src="" alt="">
+                </p>
+            </h2>
+        </div>
+        <br>
+        <button class="icon-button" onclick="playSound('MENU.mp3')">
+            <div><h3></h3><a href="TelaPrincipal.html"><img class="home-icon" src="imgs/home.png" alt="Ícone 1"></a></div>
+            <img class="play" src="imgs/playbutton.png" alt="">
+         </button>
+        <br>
+        <button class="icon-button" onclick="playSound('som2.mp3')">
+            <div><h4></h4><a href="Login.html"><img class="home-icon" src="imgs/register.png" alt="Ícone 2"></a></div> 
+            <img class="play" src="imgs/playbutton.png" alt="">
+        </button>
+        <br>
+        <button class="icon-button" onclick="playSound('som3.mp3')">
+            <div><h4></h4><img class="home-icon" src="imgs/icone sair-PhotoRoom.png-PhotoRoom.png" alt="Ícone 3"></div> 
+            <img class="play" src="imgs/playbutton.png" alt="">
+        </button>
+        <img class="VIDEO" src="imgs/VIDEO EXEMPLO.png" alt="">
+    </div>
+
+    
+
+    
+    <div id="navbar">
+        <img src="imgs/Logos/Central.png" alt="SomenteNome">
+    </div>
+
+    <div id="navbar-mobile">
+       <img src="imgs/Logos/Central.png" alt="SomenteNome" id="MobileIMG">
+    </div>
+
+    <div id="content">   
+        <div id="grid">
+            <!-- As imagens da Aula vão aqui -->
+        </div>
+                <div class="quadrado">
+                    <h4 id="title-form">Novo orientador</h4>
+                <form action="" class="form"> 
+                    
+                    <div class="form-details">
+                        <h3>Meu acesso</h3>
+                        
+                        <label for="email">*Email:
+                            <input type="email" id="email" placeholder="Digite seu email">
+                        </label>
+                        
+                        <label for="email">*Repita o email:
+                            <input type="email" id="confirmar_email" placeholder="email">
+                        </label>
+
+                        <label for="senha">*Senha:
+                            <input type="password" id="senha" placeholder="Digite sua senha">
+                        </label>
+
+                        <label for="password">*Repita a senha:
+                            <input type="password" id="confirmar_password" placeholder="senha">
+                        </label>
+
+                        
+                    </div>
+
+                    <div  class="form-details">
+                        <h3 class="">Sobre você</h3>
+
+                        <label for="nome">*Nome:
+                            <input type="text" id="nome">
+                        </label>
+                        
+                        <label for="sobrenome">*Sobrenome:
+                            <input type="text" id="sobrenome">
+                        </label>
+
+                        <label for="data_nascimento">*Data de nascimento:
+                            <input type="date" id="data_nascimento" class="text-input">
+                        </label>
+
+                        <label>*Sexo:
+                            <select id="sexo">
+                                <option value="M">Masculino</option>
+                                <option value="F">Feminino</option>
+                                <option value="O">Outro</option>
+                            </select>
+                        </label>
+
+                        <label>*Escolaridade:
+                            <select id="escolaridade">
+                                <option>Ensino Superior Completo</option>
+                                <option>Ensino Superior Incompleto</option>
+                                <option>Ensino Médio Completo</option>
+                                <option>Ensino Médio Incompleto</option>
+                                <option>Ensino Fundamental Completo</option>
+                                <option>Ensino Fundamental Incompleto</option>
+                            </select>
+                        </label>
+
+                        <label>*Profissão:
+                            <input type="text"placeholder="Profissão" id="profissao">
+                        </label>
+
+                        <label>*Área de interesse:
+                            <select id="area_interesse">
+                            </select>
+                        </label>
+
+                        <button class="btn-add">Adicionar</button>
+
+                        <label>*Telefone de contato:
+                            <input type="text"placeholder="Telefone" id="telefone">
+                        </label>
+                    </div>
+
+                    <div class="form-details">
+                        <h3>Endereço</h3>
+                        <label>*Rua:
+                            <input type="text"placeholder="rua" id="logradouro">
+                        </label>
+
+                        <label>*Número:
+                            <input type="text"placeholder="número" id="numero">
+                        </label>
+
+                        <label>*Complemento:
+                            <input type="text"placeholder="complemento" id="complemento">
+                        </label>
+
+                        <label>*Bairro:
+                            <input type="text"placeholder="bairro" id="bairro">
+                        </label>
+
+                        <label>*Município:
+                            <select  class="text-input" id="municipio">
+                            </select>
+                        </label>
+
+                        <label>*CEP:
+                            <input type="text"placeholder="cep" id="cep">
+                            <p>*campos obrigatórios</p>
+                        </label>
+
+                        <button type="button" class="btn btn-warning" onclick="btn_voltar()">Voltar</button>
+                        <button  type="button" class="btn btn-success" onclick="btn_salvar_dados_orientador()">Criar</button>
+                    </div>
+                    
+                </form>
+
+                </div>
+        
+    </div>
+
+    <a href="https://chat.whatsapp.com/GGR2y3BJwkPBnNQYPHeT2L" target="_blank">
+        <img src="imgs/whatsapplogo.png.webp" id="whatsapp-button">
+    </a>
+
+    <script src="js/cadastro_orientador.js"></script>
+</body>
+</html>

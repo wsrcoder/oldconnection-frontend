@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CadastroAluno</title>
+    <link rel="stylesheet" type="text/css" href="CadastroAluno.css">
+
+</head>
+<body>
+    <div id="logo">
+        <a href="TelaPrincipal.html"><img src="imgs/Logos/Logo.jpg" alt=""></a>
+    </div>
+
+    <div id="sidebar">
+        <div id="Menu">
+            <h2>
+                <p>
+                    <img src="" alt="">
+                </p>
+            </h2>
+        </div>
+        <br>
+        <button class="icon-button" onclick="playSound('MENU.mp3')">
+           <div><h3></h3><a href="TelaPrincipal.html"><img class="home-icon" src="imgs/home.png" alt="Ícone 1"></a></div>
+           <img class="play" src="imgs/playbutton.png" alt="">
+        </button>
+        <br>
+        <button class="icon-button" onclick="playSound('som2.mp3')">
+            <div><h4></h4><a href="Login.html"><img class="home-icon" src="imgs/register.png" alt="Ícone 2"></a></div> 
+            <img class="play" src="imgs/playbutton.png" alt="">
+        </button>
+        <br>
+        <button class="icon-button" onclick="playSound('som3.mp3')">
+            <div><h4></h4> <a href=""><img class="home-icon" src="imgs/icone sair-PhotoRoom.png-PhotoRoom.png" alt="Ícone 3"></a></div> 
+            <img class="play" src="imgs/playbutton.png" alt="">
+        </button>
+        <img class="VIDEO" src="imgs/VIDEO EXEMPLO.png" alt="">
+    </div>
+
+    <div id="navbar">
+        <img src="imgs/Logos/Central.png" alt="SomenteNome">
+    </div>
+
+    <div id="navbar-mobile">
+       <img src="imgs/Logos/Central.png" alt="SomenteNome" id="MobileIMG">
+    </div>
+    
+    <article>
+        <div class="quadrado"> 
+        <form>
+            <h1>Cadastro Aluno</h1>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="sobrenome">Sobrenome:</label><br>
+            <input type="text" id="sobrenome" name="sobrenome"><br>
+            <label for="nascimento">Data de Nascimento:</label><br>
+            <input type="date" id="nascimento" name="nascimento"><br>
+            <label for="sexo">Sexo:</label><br>
+            <select id="sexo" name="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select><br>
+            <label for="escolaridade">Escolaridade:</label><br>
+            <input type="text" id="escolaridade" name="escolaridade"><br>
+            <label for="profissao">Profissão:</label><br>
+            <input type="text" id="profissao" name="profissao"><br>
+            <label for="municipio">Insira ID do responsalvel:</label><br>
+            <input type="text" id="IdResponsavel" name="IdResponsavel"><br>
+            <label for="necessidade">Possui necessidade especial? Descreva:</label><br>
+            <input type="checkbox" id="necessidade" name="necessidade"><br>
+            <textarea id="descricao" name="descricao"></textarea><br>
+            <label for="endereco">Endereço:</label><br>
+            <input type="text" id="endereco" name="endereco"><br>
+            <label for="numero">Número:</label><br>
+            <input type="text" id="numero" name="numero"><br>
+            <label for="complemento">Complemento:</label><br>
+            <input type="text" id="complemento" name="complemento"><br>
+            <label for="bairro">Bairro:</label><br>
+            <input type="text" id="bairro" name="bairro"><br>
+            <label for="municipio">Município:</label><br>
+            <input type="text" id="municipio" name="municipio"><br>
+            <label for="cep">CEP:</label><br>
+            <input type="text" id="cep" name="cep"><br>
+            <input type="button" value="Voltar">
+            <input type="submit" value="Criar">
+        </form>
+      </div>
+    </article>
+
+
+    <a href="https://chat.whatsapp.com/GGR2y3BJwkPBnNQYPHeT2L" target="_blank">
+        <img src="imgs/whatsapplogo.png.webp" id="whatsapp-button">
+    </a>
+
+   
+</body>
+</html>
