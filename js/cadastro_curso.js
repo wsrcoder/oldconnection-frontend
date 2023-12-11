@@ -26,6 +26,7 @@ async function btn_salvar_dados_curso()
         "fim_inscricoes": fim_inscricoes.value,
         "quantidade_vagas": quantidade_vagas.value,
         "tel_contato": tel_contato.value,
+        "img_path":"imgs/curso-default.jpg",
         "curso_etiqueta": curso_etiqueta.value,
         "video_apresentacao": video_apresentacao.value,
         "logradouro": logradouro.value,
@@ -43,6 +44,7 @@ async function btn_salvar_dados_curso()
 async function salvar_dados_curso(curso)
 {
     const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
+    //const url = 'http://localhost:3000/cursos'
 
 
     const options = {

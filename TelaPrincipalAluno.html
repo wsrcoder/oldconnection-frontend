@@ -29,7 +29,7 @@
             <img class="play" src="imgs/playbutton.png" alt="">
         </button>
         <br>
-        <button class="icon-button" onclick="playSound('som3.mp3')">
+        <button class="icon-button" onclick="btn_logout()">
             <div><h4></h4><img class="home-icon" src="imgs/icone sair-PhotoRoom.png-PhotoRoom.png" alt="Ícone 3"></div> 
             <img class="play" src="imgs/playbutton.png" alt="">
         </button>
@@ -47,8 +47,8 @@
        <img src="imgs/Logos/Central.png" alt="SomenteNome" id="MobileIMG">
     </div>
 
-    <div id="content">   
-        <article>
+    <div id="content-container">   
+        <article id="content">
             <h1>Bem vindo, aluno! Veja a lista de eventos e cursos disponiveis no momento:</h1>
             <div class="quadradoCheckBox2">
                 <input type="checkbox" id="meuCheckbox" class="checkbox-espaco" name="Gratuitos">
@@ -59,53 +59,7 @@
 
                 
             </div>
-            <section class="course-container">
-                <div class="course-presentation">
-                    <div class="container-title">
-                        <h5>Matemática e Ciências da Natureza</h5>
-                    </div>
-                    <div class="container-img">
-                        <img src="imgs/matematica.jpg" alt="Imagem 1">
-                    </div>
-                    <div class="container-description">
-                        <p>Aula 1: Matemática Básica #1</p>
-                    </div>
-                    <div class="container-actions">
-                        <div class="action-item">
-                            <button>Sobre</button>
-                        </div>
-                        <br>
-           
-                        <div class="action-item">
-                            <button>Classe</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="course-container">
-                <div class="course-presentation">
-                    <div class="container-title">
-                        <h5>Linguagens, Ciências Humanas</h5>
-                    </div>
-                    <div class="container-img">
-                        <img src="imgs/Aulas-pt.png" alt="Imagem 1">
-                    </div>
-                    <div class="container-description">
-                        <p>Aula 1: Portugues Básico #1</p>
-                    </div>
-                    <div class="container-actions">
-                        <div class="action-item">
-                            <button>Sobre</button>
-                        </div>
-                        <br>
-                   
-                        <div class="action-item">
-                            <button>Classe</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            
         </article>
     </div>
 
@@ -114,6 +68,6 @@
         <img src="imgs/whatsapplogo.png.webp" id="whatsapp-button">
     </a>
 
-   
+    <script src="js/telaprincipal_aluno.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@
 async function obterUsuarios()
 {
     const url = 'https://oldconnection-api-vercel.vercel.app/usuarios/'
+    //const url = 'http://localhost:3000/usuarios'
     const response = await fetch(url)
 
     const usuarios = await response.json()
