@@ -29,7 +29,12 @@ async function on_login()
         if(usuarios[i].email === email.value && usuarios[i].senha === senha.value)
         {
             usuario = usuarios[i]
-            sessionStorage.setItem(usuario.email, usuario)
+            sessionStorage.setItem('usuario_credencial', usuario.email)
+            sessionStorage.setItem('usuario_nome', usuario.nome)
+            sessionStorage.setItem('usuario_sobrenome', usuario.sobrenome)
+            sessionStorage.setItem('usuario_id', usuario.id)
+            sessionStorage.setItem('usuario_tipo', usuario.tipo_usuario)
+
             login_sucess = true;
         }
     }

@@ -9,6 +9,12 @@ async function gerar_conteudo()
 {
     const cursos = await obter_cursos()
 
+    const nome = sessionStorage.getItem('usuario_nome')
+    let saudacao_text = document.createElement('h1')
+    saudacao_text.innerText = 'Bem vindo, ' + nome + '. Veja a lista de eventos e cursos disponiveis no momento'
+
+    content_container.appendChild(saudacao_text)
+
     for(let i=0; i < cursos.length; i++)
     {
         criar_nova_secao(cursos[i])
@@ -88,4 +94,8 @@ function criar_nova_secao(curso)
 function btn_logout()
 {
     window.location.replace("./index.html")
+}
+function btn_home()
+{
+    window.location.replace("./TelaPrincipalAluno.html")
 }
