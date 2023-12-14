@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body{
+    min-width: 480px;
+    min-height: 640px;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: 150px 1fr 100px;
+    grid-template-rows: 150px 1fr 5%;
+}
+
+.header-container{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100%;
+}
+
+.logo-container{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+
+    /*background: linear-gradient(to top,#074f5f,#0094B2);*/
+    background: linear-gradient(to left,#EEC400, #FFD820, #FFF139);
+}
+
+.logo-container img{
+    max-width: 75%;
+    max-height: 75%;
+
+    padding: 20px;
+}
+
+.title-container{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    font-size: 25px;
+    /*background: linear-gradient(to top,#074f5f,#0094B2);*/
+    background: linear-gradient(to right,#EEC400, #FFD820, #FFF139);
+    
+}
+
+.title-container img{
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding-top: 10px;
+}
+
+.title-container h1{
+    font-size: 48px;
+    text-align: center;
+}
+
+.title-container h3{
+    font-size: 24px;
+    text-align: center;
+}
+
+header{
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    
+}
+
+main{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    background-color: white;
+
+    /*color: wheat;*/
+    color: black;
+}
+
+article{
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+aside{
+    background: #074f5f;
+}
+
+.left-menu{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    
+}
+
+.right-menu{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: white;
+}
+
+.side-menu-item:hover{
+    background: #0094B2;
+}
+.side-menu-item{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+
+    width: 150px;
+    height: 100px;
+
+    /*outline: 1px solid black;*/
+}
+
+.item-link{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+.item-link img{
+    margin-left: 10px;
+    width: 80%;
+    padding-top: 10px;
+
+    cursor: pointer;
+}
+
+.item-link img:hover{
+    width: 100%;
+    cursor: pointer;
+}
+
+.item-sound{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+
+.item-sound img{
+
+    padding-left: 20px;
+    padding-top: 40px;
+    width: 50%;
+
+    cursor: pointer;
+}
+
+.item-sound img:hover{
+    width: 60%;
+
+    cursor: pointer;
+}
+
+.item-video-tuto{
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.item-video-tuto img{
+    padding-left: 10%;
+    width: 60%;
+
+    cursor: pointer;
+}
+
+.item-video-tuto img:hover{
+    width: 70%;
+    cursor: pointer;
+}
+
+
+.course-container{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin: 20px;
+}
+
+.course-presentation{
+    display: grid;
+
+    grid-template-columns: 30% 1fr 20%;
+    grid-template-rows: 20% 1fr;
+
+    /*background: linear-gradient(to bottom,#9c851f, #FFD820);*/
+    background: linear-gradient(to left,#EEC400, #FFD820, #FFF139);
+}
+
+.course-presentation .container-img{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.course-presentation .container-img img{
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+.course-presentation .container-title{
+    grid-column-start: 2;
+    grid-column-end: 4;
+
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    text-align: center;
+    font-size: 1.3em;
+
+    /*background: linear-gradient(to top,#9c851f, #FFD820, #FFF139);*/
+    background: linear-gradient(to left,#EEC400, #FFD820, #FFF139);
+}
+
+.course-presentation .container-title h5{
+    margin: 0;
+    color: black;
+}
+
+.course-presentation .container-description{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    padding-left: 10px;
+
+}
+
+.course-presentation .container-description p{
+    color:black;
+}
+
+.course-presentation .container-actions{
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.course-presentation .container-actions .action-item{
+    display: flex;
+    justify-content:center;
+}
+
+.course-presentation .container-actions .action-item button{
+    background-color: #0094B2;
+    color: white;
+
+    width: 100px;
+    height: 30px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.course-presentation .container-actions .action-item button:hover{
+    background-color: #0094B2;
+}
+
+/*CONTOLES PARA TELAS DE REGISTROS*/
+ .register{
+    display: grid;
+
+    grid-template-columns: 30% 1fr 30%;
+    grid-template-rows: 100%;
+ }
+ 
+ .register .container{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    margin-top: 25px;
+
+}
+
+.register .container .horizontal-layout{
+    display: flex;
+}
+
+
+.register .container .component{
+    margin-top: 20px;
+}
+
+.register .container .horizontal-layout span{
+    display:inline-block; 
+    width: 30px;
+}
+
+.register .container .component label{
+    display: block;
+}
+
+
+.register .container *.component input, textarea, button, select{
+    border-radius: 20px;
+
+    background-color: #0094B2;
+    color: white;
+    font-size: 25px;
+
+    width: 100%;
+}
+
+.register .container .horizontal-layout button{
+    border-radius: 20px;
+
+    background-color: #0094B2;
+    color: white;
+    font-size: 25px;
+
+    width: 150px;
+}
+
+.register .container .component button:hover{
+    background-color: #EEC400;
+    color: black;
+
+    font-size: 25px;
+}
+
+.register .container .component input:focus, textarea:focus, select:focus{
+    background-color: #EEC400;
+    color: black;
+
+    font-size: 25px;
+}
+
+.register .register-footer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    /*background: linear-gradient(to bottom,#9c851f, #FFD820, #FFF139);*/
+    background: linear-gradient(to bottom,#EEC400, #FFD820, #FFF139);
+}
+
+.whatsapp-button {
+    position: fixed;
+    right:10px; 
+    bottom: 30px; 
+    width:70px; 
+    height:auto; 
+ }

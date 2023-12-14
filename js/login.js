@@ -1,6 +1,5 @@
 'use strict'
 
-
 async function obterUsuarios()
 {
     const url = 'https://oldconnection-api-vercel.vercel.app/usuarios/'
@@ -19,7 +18,7 @@ async function on_login()
    const senha = document.getElementById('senha')
 
 
-   
+   alert(email.value)
     const usuarios = await obterUsuarios()
     let usuario
     let login_sucess = false;
