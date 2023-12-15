@@ -180,7 +180,7 @@ async function btn_salvar_dados_responsavel()
 
 
     const responsavel = {
-        "tipo_usuario": 1, //1 - responsavel e aluno
+        "tipo_usuario": 1, 
         "email": email.value,
         "password": password.value,
         "nome_responsavel": nome_responsavel.value,

@@ -21,8 +21,7 @@
         <main>
             
             <article>
-                <h1>Novo Responsável/Aluno</h1>
-                <p>Seja bem-vindo! Cada pessoa só pode ser responsável por um aluno em uma conta. Se você é responsável por mais de uma pessoa deve criar uma conta separada para cada um.</p>
+                <h1>Cadastro de novo orientador</h1>
                 <br>
                 <p>(*) Campos obrigatórios</p>
                 <section class="register">
@@ -49,62 +48,51 @@
                             <h3>Sobre você</h3>
                             <div class="horizontal-layout">
                                 <div class="component">
-                                    <label for="nome-responsavel">*Nome</label>
-                                    <input type="text" id="nome-responsavel" name="nome-responsavel">
+                                    <label for="nome-orientador">*Nome</label>
+                                    <input type="text" id="nome-orientador">
                                     
                                 </div>
                                 <span></span>
                                 <div class="component">
-                                    <label for="sobrenome-responsavel">*Sobrenome</label>
-                                    <input type="text" id="sobrenome-responsavel">
+                                    <label for="sobrenome-orientador">*Sobrenome</label>
+                                    <input type="text" id="sobrenome-orientador">
                                 </div>
                             </div>
                             <div class="horizontal-layout">
                                 <div class="component">
-                                    <label for="idade-responsavel">Sua idade</label>
-                                    <input type="text" id="idade-responsavel">
+                                    <label for="idade-orientador">Sua idade</label>
+                                    <input type="text" id="idade-orientador">
                                     
                                 </div>
                                 <span></span>
                                 <div class="component">
-                                    <label for="telefone-responsavel">*Seu telefone</label>
-                                    <input type="text" id="telefone-responsavel">
+                                    <label for="telefone-orientador">*Seu telefone</label>
+                                    <input type="text" id="telefone-orientador">
                                 </div>
                             </div>
                             
-                            <h3>Sobre a pessoa que você é o Responsável</h3>
-                            <div class="horizontal-layout">
-                                <div class="component">
-                                    <label for="nome-aluno">*Nome do Aluno</label>
-                                    <input type="text" id="nome-aluno" name="nome-aluno">
-                                    
-                                </div>
-                                <span></span>
-                                <div class="component">
-                                    <label for="sobrenome-aluno">*Sobrenome do Aluno</label>
-                                    <input type="text" id="sobrenome-aluno">
-                                </div>
-                            </div>
-                            <div class="horizontal-layout">
-                                <div class="component">
-                                    <label for="idade-aluno">*Idade do Aluno</label>
-                                    <input type="text" id="idade-aluno">
-                                    
-                                </div>
-                                <span></span>
-                                <div class="component">
-                                    <label for="telefone-aluno">*Telefone do Aluno</label>
-                                    <input type="text" id="telefone-aluno">
-                                </div>
-                            </div>
+                            <h3>Conhecimento</h3>
+                            <label>*Escolaridade
+                                <select id="escolaridade">
+                                    <option value="1">Sem escolaridade</option>
+                                    <option value="2">Ensino fundamental incompleto</option>
+                                    <option value="3">Ensino fundamental completo</option>
+                                    <option value="4">Ensino medio incompleto</option>
+                                    <option value="5">Ensino medio completo</option>
+                                    <option value="6">Ensino superior incompleto</option>
+                                    <option value="7">Ensino superior completo</option>
+                                </select>
+                            </label>
                             <div class="component">
-                                <label for="descricao-aluno">Descreva os objetivos do aluno para que o orientador tenha uma idéia</label>
-                                <textarea id="descricao-aluno" cols="40" rows="5"></textarea>
+                                <label for="profissao">*Profissao</label>
+                                <input id="profissao" type="text" />
                             </div>
+                            
                             <div class="component">
-                                <label for="necessidades-aluno">O Aluno tem necessidades especiais e/ou problemas de saude? Descreva</label>
-                                <textarea id="necessidades-aluno" cols="40" rows="5"></textarea>
+                                <label for="descricao-orientador">*Fale um pouco sobre você e o porque você seria um bom orientador</label>
+                                <textarea id="descricao-orientador" cols="40" rows="5"></textarea>
                             </div>
+                           
                             
                             <div class="register-footer">
                                 <div class="horizontal-layout">
@@ -112,7 +100,7 @@
                                         <button id="btn-cancelar" onclick="btn_voltar()">Cancelar</button>
                                     </div>
                                     <div class="component">
-                                        <button  id="btn-salvar" onclick="btn_salvar_dados_responsavel()">Salvar</button>
+                                        <button  id="btn-salvar" onclick="btn_salvar_dados_orientador()">Salvar</button>
                                     </div>
                                 </footer>
                             </div>
@@ -140,6 +128,6 @@
             </div>
         </footer>
 
-        <script src="js/cadastro_responsavel.js"></script>
+        <script src="js/cadastro_orientador.js"></script>
     </body>
 </html>

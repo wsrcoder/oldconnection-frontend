@@ -91,6 +91,11 @@ async function on_login()
 
 }
 
+function on_criar_conta_orientador()
+{
+    window.location.replace("./cadastro_orientador.html")
+}
+
 function on_criar_conta_responsavel()
 {
     window.location.replace("./cadastro_responsavel.html")
