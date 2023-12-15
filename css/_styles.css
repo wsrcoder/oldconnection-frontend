@@ -312,7 +312,8 @@ aside{
 
 
 .register .container *.component input, textarea, button, select{
-    border-radius: 20px;
+    border-radius: 5px;
+    padding: 10px;
 
     background-color: #0094B2;
     color: white;

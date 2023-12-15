@@ -91,9 +91,9 @@ async function on_login()
 
 }
 
-function btn_responsavel()
+function on_criar_conta_responsavel()
 {
-    window.location.replace("./CadastroResponsavel.html")
+    window.location.replace("./cadastro_responsavel.html")
 }
 
 function is_valid_email(email)
