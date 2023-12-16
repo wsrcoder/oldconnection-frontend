@@ -267,7 +267,9 @@ aside{
     width: 100px;
     height: 30px;
 
-    border-radius: 20px;
+    border-radius: 5px;
+
+    font-size: 12px;
 
     cursor: pointer;
 }

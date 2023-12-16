@@ -56,11 +56,22 @@ async function on_login()
         if(usuarios[i].email === email.value && usuarios[i].password === password.value)
         {
             usuario = usuarios[i]
-            sessionStorage.setItem('usuario_credencial', usuario.email)
-            sessionStorage.setItem('usuario_nome', usuario.nome)
-            sessionStorage.setItem('usuario_sobrenome', usuario.sobrenome)
-            sessionStorage.setItem('usuario_id', usuario.id)
-            sessionStorage.setItem('usuario_tipo', usuario.tipo_usuario)
+            if(usuario.tipo_usuario === 1)
+            {
+                sessionStorage.setItem('usuario_credencial', usuario.email)
+                sessionStorage.setItem('usuario_nome', usuario.nome_responsavel)
+                sessionStorage.setItem('usuario_sobrenome', usuario.sobrenome_responsavel)
+                sessionStorage.setItem('usuario_id', usuario.id)
+                sessionStorage.setItem('usuario_tipo', usuario.tipo_usuario)
+            }
+            else if(usuario.tipo_usuario === 2)
+            {
+                sessionStorage.setItem('usuario_credencial', usuario.email)
+                sessionStorage.setItem('usuario_nome', usuario.nome_orientador)
+                sessionStorage.setItem('usuario_sobrenome', usuario.sobrenome_orientador)
+                sessionStorage.setItem('usuario_id', usuario.id)
+                sessionStorage.setItem('usuario_tipo', usuario.tipo_usuario)
+            }
 
             login_sucess = true;
         }
@@ -70,7 +81,7 @@ async function on_login()
     {
         if(usuario.tipo_usuario === 1)
         {
-            window.location.replace("./TelaPrincipalAluno.html")
+            window.location.replace("./tela_responsavel.html")
         }
         else if(usuario.tipo_usuario === 2)
         {
