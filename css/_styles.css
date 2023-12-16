@@ -318,8 +318,9 @@ aside{
 }
 
 
-.register .container *.component input, textarea, button, select{
+.register .container *.component textarea, button, select{
     border-radius: 5px;
+    border: none;
     padding: 10px;
 
     background-color: #0094B2;
@@ -327,6 +328,18 @@ aside{
     font-size: 25px;
 
     width: 100%;
+}
+
+.register .container *.component input{
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+
+    background-color: #0094B2;
+    color: white;
+    font-size: 25px;
+
+    width: 90%;
 }
 
 .register .container .horizontal-layout button{
