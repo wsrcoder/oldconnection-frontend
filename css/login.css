@@ -6,8 +6,8 @@ body{
     height: 100vh;
     font-family: 'Roboto', sans-serif;
 
-    background: linear-gradient(#0095B5,#0094B2,#19ADCB,#32C6E4);
-    /*background: linear-gradient(#32C6E4,#0094B2,#19ADCB,#074f5f);*/
+    /*background: linear-gradient(#0095B5,#0094B2,#19ADCB,#32C6E4);*/
+    background: linear-gradient(#32C6E4,#0094B2,#19ADCB,#074f5f);
     
 }
 
@@ -76,6 +76,9 @@ header{
 .logo{
     display: flex;
     justify-content:center;
+
+    width: 80%;
+    height: 80%;
 }
 
 .conta-responsavel-container .nova-conta-item{

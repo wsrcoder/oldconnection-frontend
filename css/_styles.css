@@ -28,11 +28,13 @@ body{
 
     /*background: linear-gradient(to top,#074f5f,#0094B2);*/
     background: linear-gradient(to left,#EEC400, #FFD820, #FFF139);
+    background: linear-gradient(to top,#074f5f, #0f6c81, #1389a3);
 }
 
 .logo-container img{
     max-width: 75%;
     max-height: 75%;
+
 
     padding: 20px;
 }
@@ -44,6 +46,7 @@ body{
     font-size: 25px;
     /*background: linear-gradient(to top,#074f5f,#0094B2);*/
     background: linear-gradient(to right,#EEC400, #FFD820, #FFF139);
+    background: linear-gradient(to top,#074f5f, #0f6c81, #1389a3);
     
 }
 
@@ -77,10 +80,11 @@ main{
     grid-column-start: 2;
     grid-column-end: 3;
 
-    background-color: white;
+    /*background-color: white;*/
+    background: #074f5f;
 
     /*color: wheat;*/
-    color: black;
+    color: white;
 }
 
 article{
@@ -103,6 +107,7 @@ aside{
     grid-column-start: 3;
     grid-column-end: 4;
     background-color: white;
+    background-color: #074f5f;
 }
 
 .side-menu-item:hover{
@@ -223,7 +228,7 @@ aside{
     text-align: center;
     font-size: 1.3em;
 
-    /*background: linear-gradient(to top,#9c851f, #FFD820, #FFF139);*/
+    /*background: linear-gradient(to top,#074f5f,#0094B2);*/
     background: linear-gradient(to left,#EEC400, #FFD820, #FFF139);
 }
 
