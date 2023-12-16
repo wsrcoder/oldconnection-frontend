@@ -45,7 +45,7 @@ async function btn_salvar_dados_curso()
        // "inicio_inscricoes": inicio_inscricoes.value,
        // "fim_inscricoes": fim_inscricoes.value,
         "quantidade_vagas": quantidade_vagas.value,
-        "img_path": "",
+        "img_path": "imgs/curso-default.jpg",
     }
 
 
