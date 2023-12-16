@@ -166,8 +166,6 @@ main{
     font-size: 1.5em;
     color: white;
     margin: 0 auto;
-
-    border-radius: 25px;
 }
 
 .login-form-component .login-textbox:focus{
@@ -183,6 +181,12 @@ main{
 
 .login-form-component .login-checkbox{
     justify-content: flex-end;
+}
+
+.login-form-component input{
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
 }
 
 .login-form-component button{
