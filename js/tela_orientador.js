@@ -144,3 +144,21 @@ function btn_logout()
 {
     window.location.replace("./index.html")
 }
+
+function ajuda_home()
+{
+    var audio = new Audio('audios/ajuda_home.mp3');
+audio.play();
+}
+
+function ajuda_cadastrar_curso()
+{
+    var audio = new Audio('audios/ajuda_cadastrar_curso.mp3');
+audio.play();
+}
+
+function ajuda_logout()
+{
+    var audio = new Audio('audios/ajuda_logout.mp3');
+audio.play();
+}
