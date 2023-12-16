@@ -133,6 +133,7 @@ main{
 .login-form{
     
     background: linear-gradient(to right,#EEC400, #FFD820, #FFF139);
+    background: linear-gradient(to right,#EEC400, #FFD820, #8f871e);
     border-radius: 25px;
 }
 
@@ -145,6 +146,7 @@ main{
 
 .login-form:hover{
     background: linear-gradient(to right,#FFF139, #FFD820, #FFF139);
+    background: linear-gradient(to right,#8f871e, #FFD820, #EEC400);
 }
 
 .login-form-component{
