@@ -43,8 +43,8 @@ async function btn_salvar_dados_curso()
 
 async function salvar_dados_curso(curso)
 {
-    const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
-    //const url = 'http://localhost:3000/cursos'
+    //const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
+    const url = 'http://localhost:3000/cursos'
 
 
     const options = {

@@ -150,8 +150,8 @@ async function btn_salvar_dados_orientador()
 
 async function salvar_dados_orientador(orientador)
 {
-    const url = 'https://oldconnection-api-vercel.vercel.app/usuarios/'
-    //const url = 'http://localhost:3000/usuarios'
+    //const url = 'https://oldconnection-api-vercel.vercel.app/usuarios/'
+    const url = 'http://localhost:3000/usuarios'
 
     const options = {
         method: 'POST',
@@ -167,6 +167,7 @@ async function salvar_dados_orientador(orientador)
     {
         //alert('erro ao salvar o orientador. Tente novamente')
         alert('orientador salvo com sucesso')
+        window.location.replace("./index.html")
         return
     }
 
