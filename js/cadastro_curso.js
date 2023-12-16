@@ -1,40 +1,51 @@
 
 async function btn_salvar_dados_curso()
 {
-    const nome_curso = document.getElementById('nome_curso')
-    const descricao_curso = document.getElementById('descricao_curso')
-    const inicio_inscricoes = document.getElementById('inicio_inscricoes')
-    const fim_inscricoes = document.getElementById('fim_inscricoes')
-    const quantidade_vagas = document.getElementById('quantidade_vagas')
-    const tel_contato = document.getElementById('tel_contato')
-    //const selecionar_imagens = document.getElementById('selecionar_imagens')
-    const curso_etiqueta = document.getElementById('curso_etiqueta')
-    //const adicionar_etiqueta = document.getElementById('adicionar_etiqueta')
-    const video_apresentacao = document.getElementById('video_apresentacao')
-    const logradouro = document.getElementById('logradouro')
-    const numero = document.getElementById('numero')
-    const complemento = document.getElementById('complemento')
-    const bairro = document.getElementById('bairro')
-    const municipio = document.getElementById('municipio')
-    const cep = document.getElementById('cep')
+    const nome_curso = document.getElementById('nome-curso')
+    const descricao_curso = document.getElementById('descricao-curso')
+    const inicio_inscricoes = document.getElementById('inicio-inscricoes')
+    const fim_inscricoes = document.getElementById('fim-inscricoes')
+    const quantidade_vagas = document.getElementById('quantidade-vagas')
 
+    if(nome_curso.value === "")
+    {
+        alert('É necessário informar o nome do curso')
+        return
+    }
+
+    if(descricao_curso.value === "")
+    {
+        alert('É necessário informar uma descrição das atividades do curso')
+        return
+    }
+
+    if(quantidade_vagas.value === "")
+    {
+        alert('É necessário informar a quantidade de vagas do curso')
+        return
+    }
+
+    if(! is_integer(quantidade_vagas.value))
+    {
+        alert('Digite apenas números para a quantidade de vagas')
+        return
+    }
+
+    if(min_value(quantidade_vagas.value, 5))
+    {
+        alert('Um curso deve ter no minimo 5 vagas')
+        return
+    }
+
+    
     const curso = {
-        "orientador_id": 0, //pegar o id do orientador
+        "orientador_id": sessionStorage.getItem('usuario_id'), //pegar o id do orientador
         "nome_curso": nome_curso.value,
         "descricao_curso": descricao_curso.value,
-        "inicio_inscricoes": inicio_inscricoes.value,
-        "fim_inscricoes": fim_inscricoes.value,
+       // "inicio_inscricoes": inicio_inscricoes.value,
+       // "fim_inscricoes": fim_inscricoes.value,
         "quantidade_vagas": quantidade_vagas.value,
-        "tel_contato": tel_contato.value,
-        "img_path":"imgs/curso-default.jpg",
-        "curso_etiqueta": curso_etiqueta.value,
-        "video_apresentacao": video_apresentacao.value,
-        "logradouro": logradouro.value,
-        "numero": numero.value,
-        "complemento": complemento.value,
-        "bairro": bairro.value,
-       // "municipio": municipio.value,
-        "cep": cep.value,
+        "img_path": "",
     }
 
 
@@ -43,8 +54,8 @@ async function btn_salvar_dados_curso()
 
 async function salvar_dados_curso(curso)
 {
-    //const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
-    const url = 'http://localhost:3000/cursos'
+    const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
+    //const url = 'http://localhost:3000/cursos'
 
 
     const options = {
@@ -66,10 +77,75 @@ async function salvar_dados_curso(curso)
         alert('Curso salvo com sucesso')
     }
 
-    window.location.replace("./TelaOrientador.html")
+    window.location.replace("./tela_orientador.html")
 }
 
 function btn_voltar()
 {
-    window.location.replace("./TelaOrientador.html")
+    window.location.replace("./tela_orientador.html")
+}
+
+
+function is_integer(value)
+{
+    const integer_validator_regex = new RegExp(
+        /^[0-9]/
+    )
+
+    if(integer_validator_regex.test(value))
+    {
+        return true
+    }
+
+    return false
+}
+
+function is_password_min_digits(password, min_digits)
+{
+    if(password.length >= min_digits)
+    {
+        return true;
+    }
+
+    return false;
+}
+
+function max_field_length(field_value, max_characters)
+{
+    if(field_value.length > max_characters)
+    {
+        return true
+    }
+
+    return false
+}
+
+function min_field_length(field_value, min_characters)
+{
+    if(field_value.length < min_characters)
+    {
+        return true
+    }
+
+    return false
+}
+
+function max_value(field_value, value)
+{
+    if(field_value > value)
+    {
+        return true
+    }
+
+    return false
+}
+
+function min_value(field_value, value)
+{
+    if(field_value < value)
+    {
+        return true
+    }
+
+    return false
 }

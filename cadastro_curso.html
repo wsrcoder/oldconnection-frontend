@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro de Responsável</title>
+        <link rel="stylesheet" type="text/css" href="css/_styles.css"/>
+    </head>
+    <body class="main-container">
+        <header class="header-container">
+            <div class="logo-container">
+                <img src="imgs/Logos/logo-img.png" alt="Logo">
+            </div>
+            <div class="title-container">
+                <img src="imgs/Logos/Central.png" alt="Logo">
+                
+            </div>
+        </header>
+        <aside>
+            
+        </aside>
+        <main>
+            
+            <article>
+                <h1>Cadastro de novo Curso</h1>
+                <br>
+                <p>(*) Campos obrigatórios</p>
+                <section class="register">
+                        <div class="container">
+                            <h3>Sobre o curso</h3>
+                            <div class="component">
+                                <label for="nome-curso">*Nome do curso</label>
+                                <input id="nome-curso" type="text" />
+                            </div>
+
+                            <div class="component">
+                                <label for="descricao-curso">*Descreva as atividades propostas no curso:</label>
+                                <textarea id="descricao-curso" cols="40" rows="5"></textarea>
+                            </div>
+
+                            <div class="horizontal-layout">
+                                <div class="component">
+                                    <label for="data_inicio">Início das inscrições:</label>
+                                    <input type="date" id="inicio_inscricoes">
+                                    
+                                </div>
+                                <span></span>
+                                <div class="component">
+                                    <label for="data_fim">Fim das inscrições:</label>
+                                    <input type="date" id="fim_inscricoes">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="component">
+                                <label for="quantidade-vagas">*vagas:</label>
+                                <input id="quantidade-vagas" type="text" />
+                            </div>
+                            
+                            
+                            <div class="register-footer">
+                                <div class="horizontal-layout">
+                                    <div class="component">
+                                        <button id="btn-cancelar" onclick="btn_voltar()">Cancelar</button>
+                                    </div>
+                                    <div class="component">
+                                        <button  id="btn-salvar" onclick="btn_salvar_dados_curso()">Salvar</button>
+                                    </div>
+                                </footer>
+                            </div>
+
+                            
+
+                        </div> 
+                </section>
+
+                <section class="register">
+                    <div class="container">
+                       
+                        
+                    
+    
+                    </div>
+                </section>
+                
+            </article>
+        </main>
+        <footer>
+            <div>
+                <a href="https://chat.whatsapp.com/GGR2y3BJwkPBnNQYPHeT2L" target="_blank">
+                    <img class="whatsapp-button" src="imgs/whatsapplogo.png.webp">
+                </a>
+            </div>
+        </footer>
+
+        <script src="js/cadastro_curso.js"></script>
+    </body>
+</html>

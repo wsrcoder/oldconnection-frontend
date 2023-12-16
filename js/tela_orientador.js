@@ -30,8 +30,8 @@ async function gerar_conteudo()
 
 async function obter_cursos()
 {
-    //const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
-    const url = 'http://localhost:3000/cursos'
+    const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
+    //const url = 'http://localhost:3000/cursos'
     const response = await fetch(url)
 
     const cursos = await response.json()
@@ -42,6 +42,8 @@ async function obter_cursos()
 
 function criar_nova_secao(curso)
 {
+    //randomizar uma base imagens
+    curso.img_path = "imgs/curso-default.jpg"
     let course_container = document.createElement('section')
     course_container.className = 'course-container'
 
@@ -71,7 +73,7 @@ function criar_nova_secao(curso)
 
             let container_actions = document.createElement('div')
             container_actions.className = 'container-actions'
-
+            /*
                 let action_item_inscrever = document.createElement('div')
                 action_item_inscrever.className = 'action-item'
                     let btn_inscrever = document.createElement('button')
@@ -91,7 +93,7 @@ function criar_nova_secao(curso)
                     action_item_inscrever.appendChild(btn_inscrever)
 
             container_actions.appendChild(action_item_inscrever)
-
+            */
         course_presentation.appendChild(container_title)
         course_presentation.appendChild(container_img)
         course_presentation.appendChild(container_description)
@@ -105,8 +107,8 @@ function criar_nova_secao(curso)
 
 async function salvar_dados_matricula(matricula)
 {
-    //const url = 'https://oldconnection-api-vercel.vercel.app/usuarios/'
-    const url = 'http://localhost:3000/matriculas'
+    const url = 'https://oldconnection-api-vercel.vercel.app/usuarios/'
+    //const url = 'http://localhost:3000/matriculas'
 
     const options = {
         method: 'POST',
@@ -135,7 +137,7 @@ function btn_logout()
 
 function btn_cadastrar_curso()
 {
-    window.location.replace("./CadastroCurso.html")
+    window.location.replace("./cadastro_curso.html")
 }
 
 function btn_logout()

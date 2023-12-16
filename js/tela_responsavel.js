@@ -23,8 +23,8 @@ async function gerar_conteudo()
 
 async function obter_cursos()
 {
-    //const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
-    const url = 'http://localhost:3000/cursos'
+    const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
+    //const url = 'http://localhost:3000/cursos'
     const response = await fetch(url)
 
     const cursos = await response.json()
@@ -98,8 +98,8 @@ function criar_nova_secao(curso)
 
 async function salvar_dados_matricula(matricula)
 {
-    //const url = 'https://oldconnection-api-vercel.vercel.app/usuarios/'
-    const url = 'http://localhost:3000/matriculas'
+    const url = 'https://oldconnection-api-vercel.vercel.app/usuarios/'
+    //const url = 'http://localhost:3000/matriculas'
 
     const options = {
         method: 'POST',
