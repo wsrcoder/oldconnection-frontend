@@ -15,7 +15,7 @@ async function obterUsuarios()
 async function on_login()
 {
     const email = document.getElementById('email')
-    const senha = document.getElementById('password')
+    const password = document.getElementById('password')
     const max_password_digits = 3
 
     
@@ -25,7 +25,7 @@ async function on_login()
             return
     }
 
-    if(senha.value === "")
+    if(password.value === "")
     {
             alert("campo senha não pode ser vazio.")
             return
@@ -45,13 +45,15 @@ async function on_login()
 
 
     const usuarios = await obterUsuarios()
+
+    
     let usuario
     let login_sucess = false;
 
     for(var i=0; i < usuarios.length; i++)
     {
 
-        if(usuarios[i].email === email.value && usuarios[i].senha === senha.value)
+        if(usuarios[i].email === email.value && usuarios[i].password === password.value)
         {
             usuario = usuarios[i]
             sessionStorage.setItem('usuario_credencial', usuario.email)
@@ -71,14 +73,6 @@ async function on_login()
             window.location.replace("./TelaPrincipalAluno.html")
         }
         else if(usuario.tipo_usuario === 2)
-        {
-            window.location.replace("./TelaPrincipalAluno.html")
-        }
-        else if(usuario.tipo_usuario === 3)
-        {
-            window.location.replace("./TelaPrincipalResponsavel.html")
-        }
-        else if(usuario.tipo_usuario === 4)
         {
             window.location.replace("./TelaOrientador.html")
         }
