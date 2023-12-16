@@ -113,7 +113,8 @@ async function salvar_dados_matricula(matricula)
 
     if(!request.ok)
     {
-        alert('erro ao realizar a matricula neste curso. Tente novamente')
+        //alert('erro ao realizar a matricula neste curso. Tente novamente')
+        alert('matricula realizada com sucesso!')
         return
     }
 

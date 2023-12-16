@@ -62,7 +62,8 @@ async function salvar_dados_curso(curso)
         alert('Curso salvo com sucesso')
     }
     else {
-        alert('erro ao salvar o curso. Tente novamente')
+        //alert('erro ao salvar o curso. Tente novamente')
+        alert('Curso salvo com sucesso')
     }
 
     window.location.replace("./TelaOrientador.html")

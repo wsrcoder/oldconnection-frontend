@@ -85,7 +85,7 @@ async function on_login()
         }
         else if(usuario.tipo_usuario === 2)
         {
-            window.location.replace("./TelaOrientador.html")
+            window.location.replace("./tela_orientador.html")
         }
         
     }

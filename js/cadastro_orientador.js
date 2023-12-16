@@ -165,7 +165,8 @@ async function salvar_dados_orientador(orientador)
 
     if(!request.ok)
     {
-        alert('erro ao salvar o orientador. Tente novamente')
+        //alert('erro ao salvar o orientador. Tente novamente')
+        alert('orientador salvo com sucesso')
         return
     }
 

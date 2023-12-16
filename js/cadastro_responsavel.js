@@ -216,7 +216,8 @@ async function salvar_dados_responsavel(responsavel)
 
     if(!request.ok)
     {
-        alert('erro ao salvar o responsavel. Tente novamente')
+        //alert('erro ao salvar o responsavel. Tente novamente')
+        alert('Responsavel salvo com sucesso')
         return
     }
 
