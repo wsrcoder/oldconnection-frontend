@@ -197,7 +197,11 @@ aside{
     grid-template-rows: 20% 1fr;
 
     /*background: linear-gradient(to bottom,#9c851f, #FFD820);*/
-    background: linear-gradient(to left,#EEC400, #FFD820, #FFF139);
+    /*background: linear-gradient(to left,#EEC400, #FFD820, #FFF139);
+    background: linear-gradient(to right,#8f871e, #FFD820, #EEC400);
+    background: linear-gradient(to bottom,#074f5f, #0f6c81, #1389a3);*/
+    background: linear-gradient(to bottom,#074f5f, #0f6c81);
+    color: white;
 }
 
 .course-presentation .container-img{
@@ -230,6 +234,7 @@ aside{
 
     /*background: linear-gradient(to top,#074f5f,#0094B2);*/
     background: linear-gradient(to left,#EEC400, #FFD820, #FFF139);
+    background: linear-gradient(to top,#8f871e, #FFD820, #EEC400);
 }
 
 .course-presentation .container-title h5{
@@ -249,7 +254,7 @@ aside{
 }
 
 .course-presentation .container-description p{
-    color:black;
+    color:white;
 }
 
 .course-presentation .container-actions{
