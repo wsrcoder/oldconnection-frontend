@@ -102,8 +102,11 @@ function criar_nova_secao(curso)
                 action_item_inscrever.className = 'action-item'
                     let btn_inscrever = document.createElement('button')
                     btn_inscrever.innerText = "Inscrever"
+                    btn_inscrever.id = curso.id
                     btn_inscrever.onclick = function()
                     {
+                        //inscrever_aluno()
+                        /*
                         if(curso.quantidade_vagas > 0)
                         {
                             const date = new Date()
@@ -126,10 +129,45 @@ function criar_nova_secao(curso)
                             }
 
                             atualizar_dados_curso(curso_atualizado)
-                            //window.location.replace("./tela_responsavel.html")
+                            
                         }
                         else{
                             alert("Esse curso não possui mais vagas no momento.")
+                        }
+                        */
+
+                        alert(this.id)
+
+                        const cursos = obter_cursos()
+
+                        for(let i=0; i < cursos.length; i++)
+                        {
+                            if(cursos[i].id == this.id)
+                            {
+                                if(cursos[i].quantidade_vagas > 0)
+                                {
+                                    const date = new Date()
+                                    const matricula ={
+                                                        "id_reponsavel": sessionStorage.getItem('usuario_id'),
+                                                        "id_curso": this.id,
+                                                        "data_inscricao":  date.getDate() + '/'
+
+                                                    }
+
+                                    salvar_dados_matricula(matricula)
+
+                                    const curso_atualizado = {
+                                        "orientador_id": cursos[i].orientador_id,
+                                        "orientador_nome": cursos[i].orientador_nome,
+                                        "nome_curso": cursos[i].nome_curso,
+                                        "descricao_curso": cursos[i].descricao_curso,
+                                        "quantidade_vagas": (cursos[i].quantidade_vagas - 1),
+                                        "img_path": cursos[i].img_path,
+                                        "id": cursos[i].id
+                                    }
+
+                                    atualizar_dados_curso(curso_atualizado)
+                                 }
                         }
                         
                     }
