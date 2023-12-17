@@ -117,12 +117,12 @@ function criar_nova_secao(curso)
                                     const date = new Date()
                                     const matricula ={
                                                         "id_reponsavel": sessionStorage.getItem('usuario_id'),
-                                                        "id_curso": this.id,
-                                                        "data_inscricao":  date.getDate() + '/'
+                                                        "id_curso": cursos[i].id,
+                                                        //"data_inscricao":  date.getDate() + '/'
 
                                                     }
 
-                                    salvar_dados_matricula(matricula)
+                                   await salvar_dados_matricula(matricula)
 
                                     const curso_atualizado = {
                                         "orientador_id": cursos[i].orientador_id,
@@ -134,7 +134,7 @@ function criar_nova_secao(curso)
                                         "id": cursos[i].id
                                     }
 
-                                    atualizar_dados_curso(curso_atualizado)
+                                    //atualizar_dados_curso(curso_atualizado)
 
                                     return
                                 }
