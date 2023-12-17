@@ -38,7 +38,7 @@ async function gerar_conteudo()
 async function obter_cursos()
 {
     const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
-    //const url = 'http://localhost:3000/cursos'
+    //const url = 'http://localhost:3000/cursos/'
     const response = await fetch(url)
 
     const cursos = await response.json()
@@ -49,7 +49,7 @@ async function obter_cursos()
 async function obter_matriculas()
 {
     const url = 'https://oldconnection-api-vercel.vercel.app/matriculas/'
-    //const url = 'http://localhost:3000/matriculas'
+    //const url = 'http://localhost:3000/matriculas/'
     const response = await fetch(url)
 
     const matriculas = await response.json()
@@ -86,6 +86,10 @@ function criar_nova_secao(curso)
                 let course_description = document.createElement('p')
                 course_description.innerText = curso.descricao_curso
             container_description.appendChild(course_description)
+
+            let orientador_nome = document.createElement('p')
+            orientador_nome.innerText = "Orientado por " + curso.orientador_nome
+        container_description.appendChild(orientador_nome)
 
             let quantidade_vagas = document.createElement('p')
                 quantidade_vagas.innerText = "Vagas: " + curso.quantidade_vagas
@@ -141,7 +145,7 @@ function criar_nova_secao(curso)
 async function salvar_dados_matricula(matricula)
 {
     const url = 'https://oldconnection-api-vercel.vercel.app/matriculas/'
-    //const url = 'http://localhost:3000/matriculas'
+    //const url = 'http://localhost:3000/matriculas/'
 
     const options = {
         method: 'POST',
@@ -175,7 +179,13 @@ function btn_cursos_cadastrados()
 
 function ajuda_home()
 {
-    var audio = new Audio('audios/ajuda_home.mp3');
+    var audio = new Audio('audios/ajuda_home_responsavel.mp3');
+audio.play();
+}
+
+function ajuda_cadastrados()
+{
+    var audio = new Audio('audios/ajuda_cadastrados_responsavel.mp3');
 audio.play();
 }
 

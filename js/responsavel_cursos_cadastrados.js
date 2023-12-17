@@ -53,7 +53,7 @@ async function obter_matriculas()
 async function obter_cursos()
 {
     const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
-    //const url = 'http://localhost:3000/cursos'
+    //const url = 'http://localhost:3000/cursos/'
     const response = await fetch(url)
 
     const cursos = await response.json()
@@ -91,6 +91,10 @@ function criar_nova_secao(curso)
                 let course_description = document.createElement('p')
                 course_description.innerText = curso.descricao_curso
             container_description.appendChild(course_description)
+
+            let orientador_nome = document.createElement('p')
+            orientador_nome.innerText = "Seu professor será " + curso.orientador_nome
+        container_description.appendChild(orientador_nome)
 
             let container_actions = document.createElement('div')
             container_actions.className = 'container-actions'
@@ -145,7 +149,7 @@ function btn_logout()
 
 function ajuda_home()
 {
-    var audio = new Audio('audios/ajuda_home.mp3');
+    var audio = new Audio('audios/ajuda_home_responsavel.mp3');
 audio.play();
 }
 

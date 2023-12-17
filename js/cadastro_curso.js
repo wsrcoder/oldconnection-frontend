@@ -40,6 +40,7 @@ async function btn_salvar_dados_curso()
     
     const curso = {
         "orientador_id": sessionStorage.getItem('usuario_id'), //pegar o id do orientador
+        "orientador_nome": sessionStorage.getItem('usuario_nome') + " " + sessionStorage.getItem('usuario_sobrenome'),
         "nome_curso": nome_curso.value,
         "descricao_curso": descricao_curso.value,
        // "inicio_inscricoes": inicio_inscricoes.value,
