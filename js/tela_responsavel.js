@@ -134,7 +134,7 @@ function criar_nova_secao(curso)
                                         "id": cursos[i].id
                                     }
 
-                                    //atualizar_dados_curso(curso_atualizado)
+                                    await atualizar_dados_curso(curso_atualizado)
 
                                     return
                                 }
