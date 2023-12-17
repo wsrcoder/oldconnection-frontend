@@ -170,10 +170,12 @@ async function salvar_dados_matricula(matricula)
     {
         //alert('erro ao realizar a matricula neste curso. Tente novamente')
         alert('matricula realizada com sucesso!')
+        window.location.replace("./tela_responsavel.html")
         return
     }
 
     alert('matricula realizada com sucesso!')
+    window.location.replace("./tela_responsavel.html")
 }
 
 function btn_logout()
