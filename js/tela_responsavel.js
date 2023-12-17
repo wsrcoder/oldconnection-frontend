@@ -126,7 +126,7 @@ function criar_nova_secao(curso)
                             }
 
                             atualizar_dados_curso(curso_atualizado)
-                            window.location.replace("./tela_responsavel.html")
+                            //window.location.replace("./tela_responsavel.html")
                         }
                         else{
                             alert("Esse curso não possui mais vagas no momento.")
