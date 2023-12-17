@@ -104,13 +104,13 @@ function criar_nova_secao(curso)
                     btn_inscrever.innerText = "Inscrever"
                     btn_inscrever.onclick = function()
                     {
-                        if(curso.quantidade_vagas >= 1)
+                        if(curso.quantidade_vagas > 0)
                         {
                             const date = new Date()
                             const matricula ={
                                 "id_reponsavel": sessionStorage.getItem('usuario_id'),
                                 "id_curso": curso.id,
-                                "data_inscricao": date.getDate()
+                                "data_inscricao":  date.getDate() + '/'
                             }
 
                             salvar_dados_matricula(matricula)
