@@ -167,7 +167,8 @@ function criar_nova_secao(curso)
                                     }
 
                                     atualizar_dados_curso(curso_atualizado)
-                                 }
+                                }
+                            }
                         }
                         
                     }
