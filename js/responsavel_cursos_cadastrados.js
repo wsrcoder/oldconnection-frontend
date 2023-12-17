@@ -9,11 +9,12 @@ gerar_conteudo()
 async function gerar_conteudo()
 {
     const cursos = await obter_cursos()
+    const matriculas = await obter_matriculas()
 
 
     const nome = sessionStorage.getItem('usuario_nome')
     let saudacao_text = document.createElement('h1')
-    saudacao_text.innerText = 'Que bom te ver por aqui, ' + nome + '. Veja abaixo a lista de cursos disponibilizados por você:'
+    saudacao_text.innerText = nome + '. Veja abaixo a lista de cursos em que você se matriculou:'
 
     content_container.appendChild(saudacao_text)
 
@@ -21,11 +22,32 @@ async function gerar_conteudo()
     for(let i=0; i < cursos.length; i++)
     {
 
-        if(cursos[i].orientador_id == sessionStorage.getItem('usuario_id'))
-        {
-            criar_nova_secao(cursos[i])
-        }      
+            let matriculado = false
+            for(let j=0; j < matriculas.length; j++)
+            {
+                if(matriculas[j].id_curso == cursos[i].id)
+                {
+                    matriculado = true
+                }
+            }
+            
+            if(matriculado)
+            {
+                criar_nova_secao(cursos[i])
+            }
+            
     }
+}
+
+async function obter_matriculas()
+{
+    const url = 'https://oldconnection-api-vercel.vercel.app/matriculas/'
+    //const url = 'http://localhost:3000/matriculas'
+    const response = await fetch(url)
+
+    const matriculas = await response.json()
+
+    return matriculas
 }
 
 async function obter_cursos()
@@ -38,7 +60,6 @@ async function obter_cursos()
 
     return cursos
 }
-
 
 function criar_nova_secao(curso)
 {
@@ -70,10 +91,6 @@ function criar_nova_secao(curso)
                 let course_description = document.createElement('p')
                 course_description.innerText = curso.descricao_curso
             container_description.appendChild(course_description)
-
-                let quantidade_vagas = document.createElement('p')
-                quantidade_vagas.innerText = "Vagas: " + curso.quantidade_vagas
-            container_description.appendChild(quantidade_vagas)
 
             let container_actions = document.createElement('div')
             container_actions.className = 'container-actions'
@@ -111,41 +128,14 @@ function criar_nova_secao(curso)
 
 
 
-async function salvar_dados_matricula(matricula)
-{
-    const url = 'https://oldconnection-api-vercel.vercel.app/matriculas/'
-    //const url = 'http://localhost:3000/matriculas'
-
-    const options = {
-        method: 'POST',
-        headers:{
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(matricula)
-    }
-
-    
-
-    const request = await fetch(url, options)
-
-    if(!request.ok)
-    {
-        //alert('erro ao realizar a matricula neste curso. Tente novamente')
-        alert('matricula realizada com sucesso!')
-        return
-    }
-
-    alert('matricula realizada com sucesso!')
-}
-
 function btn_logout()
 {
     window.location.replace("./index.html")
 }
 
-function btn_cadastrar_curso()
+function btn_home()
 {
-    window.location.replace("./cadastro_curso.html")
+    window.location.replace("./tela_responsavel.html")
 }
 
 function btn_logout()

@@ -1,4 +1,4 @@
-
+'use strict'
 
 const content_container = document.getElementById('content')
 
@@ -7,6 +7,7 @@ gerar_conteudo()
 async function gerar_conteudo()
 {
     const cursos = await obter_cursos()
+    const matriculas = await obter_matriculas()
 
 
     const nome = sessionStorage.getItem('usuario_nome')
@@ -17,7 +18,20 @@ async function gerar_conteudo()
 
     for(let i=0; i < cursos.length; i++)
     {
-        criar_nova_secao(cursos[i])
+        let cadastrado = false
+        for(let j=0; j < matriculas.length; j++)
+        {
+            if(matriculas[j].id_curso == cursos[i].id)
+            {
+                cadastrado = true
+            }
+        }
+
+        if(!cadastrado)
+        {
+            criar_nova_secao(cursos[i])
+        }
+        
     }
 }
 
@@ -30,6 +44,17 @@ async function obter_cursos()
     const cursos = await response.json()
 
     return cursos
+}
+
+async function obter_matriculas()
+{
+    const url = 'https://oldconnection-api-vercel.vercel.app/matriculas/'
+    //const url = 'http://localhost:3000/matriculas'
+    const response = await fetch(url)
+
+    const matriculas = await response.json()
+
+    return matriculas
 }
 
 
@@ -62,6 +87,10 @@ function criar_nova_secao(curso)
                 course_description.innerText = curso.descricao_curso
             container_description.appendChild(course_description)
 
+            let quantidade_vagas = document.createElement('p')
+                quantidade_vagas.innerText = "Vagas: " + curso.quantidade_vagas
+            container_description.appendChild(quantidade_vagas)
+
             let container_actions = document.createElement('div')
             container_actions.className = 'container-actions'
 
@@ -79,6 +108,17 @@ function criar_nova_secao(curso)
                         }
 
                         salvar_dados_matricula(matricula)
+
+                        const curso_atualizado = {
+                            "orientador_id": curso.orientador_id,
+                            "nome_curso": curso.nome_curso,
+                            "descricao_curso": curso.descricao_curso,
+                            "quantidade_vagas": (curso.quantidade_vagas - 1),
+                            "img_path": curso.img_path,
+                            "id": curso.id
+                        }
+
+                        atualizar_dados_curso(curso_atualizado)
                     }
                 
                     action_item_inscrever.appendChild(btn_inscrever)
@@ -94,11 +134,13 @@ function criar_nova_secao(curso)
 
 
     content_container.appendChild(course_container)
+
+    //window.location.replace("./tela_responsavel.html")
 }
 
 async function salvar_dados_matricula(matricula)
 {
-    const url = 'https://oldconnection-api-vercel.vercel.app/usuarios/'
+    const url = 'https://oldconnection-api-vercel.vercel.app/matriculas/'
     //const url = 'http://localhost:3000/matriculas'
 
     const options = {
@@ -126,6 +168,11 @@ function btn_logout()
     window.location.replace("./index.html")
 }
 
+function btn_cursos_cadastrados()
+{
+    window.location.replace("./responsavel_cursos_cadastrados.html")
+}
+
 function ajuda_home()
 {
     var audio = new Audio('audios/ajuda_home.mp3');
@@ -136,4 +183,23 @@ function ajuda_logout()
 {
     var audio = new Audio('audios/ajuda_logout.mp3');
 audio.play();
+}
+
+async function atualizar_dados_curso(curso)
+{
+    const url = 'https://oldconnection-api-vercel.vercel.app/cursos/'
+    //const url = 'http://localhost:3000/cursos/'
+
+    const options = {
+        method: 'PUT',
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+               
+        },
+        body: JSON.stringify(curso)
+    }
+
+    const res = await fetch(url + curso.id, options)
 }
