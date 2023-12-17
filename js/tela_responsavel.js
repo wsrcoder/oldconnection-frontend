@@ -105,39 +105,6 @@ function criar_nova_secao(curso)
                     btn_inscrever.id = curso.id
                     btn_inscrever.onclick = async function()
                     {
-                        //inscrever_aluno()
-                        /*
-                        if(curso.quantidade_vagas > 0)
-                        {
-                            const date = new Date()
-                            const matricula ={
-                                "id_reponsavel": sessionStorage.getItem('usuario_id'),
-                                "id_curso": curso.id,
-                                "data_inscricao":  date.getDate() + '/'
-                            }
-
-                            salvar_dados_matricula(matricula)
-
-                            const curso_atualizado = {
-                                "orientador_id": curso.orientador_id,
-                                "orientador_nome": curso.orientador_nome,
-                                "nome_curso": curso.nome_curso,
-                                "descricao_curso": curso.descricao_curso,
-                                "quantidade_vagas": (curso.quantidade_vagas - 1),
-                                "img_path": curso.img_path,
-                                "id": curso.id
-                            }
-
-                            atualizar_dados_curso(curso_atualizado)
-                            
-                        }
-                        else{
-                            alert("Esse curso não possui mais vagas no momento.")
-                        }
-                        */
-
-                        
-
                         const cursos = await obter_cursos()
 
 
@@ -168,6 +135,10 @@ function criar_nova_secao(curso)
                                     }
 
                                     atualizar_dados_curso(curso_atualizado)
+                                }
+                                else 
+                                {
+                                    alert("Esse curso não possui mais vagas no momento.")
                                 }
                             }
                         }
