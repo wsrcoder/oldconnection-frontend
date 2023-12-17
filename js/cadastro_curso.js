@@ -46,7 +46,8 @@ async function btn_salvar_dados_curso()
        // "inicio_inscricoes": inicio_inscricoes.value,
        // "fim_inscricoes": fim_inscricoes.value,
         "quantidade_vagas": quantidade_vagas.value,
-        "img_path": "imgs/curso-default.jpg",
+        //"img_path": "imgs/curso-default.jpg",
+        "img_path": gerar_nome_imagem_aleatoria()
     }
 
 
@@ -79,6 +80,13 @@ async function salvar_dados_curso(curso)
     }
 
     window.location.replace("./tela_orientador.html")
+}
+
+function gerar_nome_imagem_aleatoria()
+{
+    const num_rand = getRandomNumber(1,13)
+
+    return "imgs/cursos/img_" + num_rand + ".jpg"
 }
 
 function btn_voltar()
@@ -149,4 +157,11 @@ function min_value(field_value, value)
     }
 
     return false
+}
+
+function getRandomNumber(min_value, max_value)
+{
+    const min = Math.ceil(min_value)
+    const max = Math.floor(max_value)
+    return Math.floor((Math.random() * (max - min)) + min);
 }

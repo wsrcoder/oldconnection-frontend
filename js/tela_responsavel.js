@@ -104,25 +104,33 @@ function criar_nova_secao(curso)
                     btn_inscrever.innerText = "Inscrever"
                     btn_inscrever.onclick = function()
                     {
-                        const date = new Date()
-                        const matricula ={
-                            "id_reponsavel": sessionStorage.getItem('usuario_id'),
-                            "id_curso": curso.id,
-                            "data_inscricao": date.getDate()
+                        if(curso.quantidade_vagas >= 1)
+                        {
+                            const date = new Date()
+                            const matricula ={
+                                "id_reponsavel": sessionStorage.getItem('usuario_id'),
+                                "id_curso": curso.id,
+                                "data_inscricao": date.getDate()
+                            }
+
+                            salvar_dados_matricula(matricula)
+
+                            const curso_atualizado = {
+                                "orientador_id": curso.orientador_id,
+                                "orientador_nome": curso.orientador_nome,
+                                "nome_curso": curso.nome_curso,
+                                "descricao_curso": curso.descricao_curso,
+                                "quantidade_vagas": (curso.quantidade_vagas - 1),
+                                "img_path": curso.img_path,
+                                "id": curso.id
+                            }
+
+                            atualizar_dados_curso(curso_atualizado)
                         }
-
-                        salvar_dados_matricula(matricula)
-
-                        const curso_atualizado = {
-                            "orientador_id": curso.orientador_id,
-                            "nome_curso": curso.nome_curso,
-                            "descricao_curso": curso.descricao_curso,
-                            "quantidade_vagas": (curso.quantidade_vagas - 1),
-                            "img_path": curso.img_path,
-                            "id": curso.id
+                        else{
+                            alert("Esse curso não possui mais vagas no momento.")
                         }
-
-                        atualizar_dados_curso(curso_atualizado)
+                        
                     }
                 
                     action_item_inscrever.appendChild(btn_inscrever)

@@ -43,7 +43,7 @@ async function obter_cursos()
 function criar_nova_secao(curso)
 {
     //randomizar uma base imagens
-    curso.img_path = "imgs/curso-default.jpg"
+    //curso.img_path = "imgs/curso-default.jpg"
     let course_container = document.createElement('section')
     course_container.className = 'course-container'
 
