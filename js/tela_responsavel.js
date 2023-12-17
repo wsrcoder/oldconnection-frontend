@@ -103,7 +103,7 @@ function criar_nova_secao(curso)
                     let btn_inscrever = document.createElement('button')
                     btn_inscrever.innerText = "Inscrever"
                     btn_inscrever.id = curso.id
-                    btn_inscrever.onclick = function()
+                    btn_inscrever.onclick = async function()
                     {
                         //inscrever_aluno()
                         /*
@@ -136,9 +136,10 @@ function criar_nova_secao(curso)
                         }
                         */
 
-                        alert(this.id)
+                        
 
-                        const cursos = obter_cursos()
+                        const cursos = await obter_cursos()
+
 
                         for(let i=0; i < cursos.length; i++)
                         {
